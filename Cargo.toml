@@ -1,0 +1,92 @@
+[package]
+name = "mushroom-bot"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rayon = "1"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+
+[[bin]]
+name = "mushroom-bot"
+path = "src/main.rs"
+
+[[bin]]
+name = "gen_geometry"
+path = "src/bin/gen_geometry.rs"
+
+[[bin]]
+name = "gen_mquality"
+path = "src/bin/gen_mquality.rs"
+
+[[bin]]
+name = "update_weights"
+path = "src/bin/update_weights.rs"
+
+[[bin]]
+name = "build_data"
+path = "src/bin/build_data.rs"
+
+[[bin]]
+name = "tournament"
+path = "src/bin/tournament.rs"
+
+[[bin]]
+name = "tuner"
+path = "src/bin/tuner.rs"
+
+[[bin]]
+name = "opening_sampler"
+path = "src/bin/opening_sampler.rs"
+
+# [[bin]]
+# name = "mushroom"
+# path = "src/bin/bot_1.rs"
+# 
+# [[bin]]
+# name = "mushroom_1"
+# path = "src/bin/bot_1.rs"
+
+[[test]]
+name = "board_tests"
+path = "tests/unit/board_tests.rs"
+
+[[test]]
+name = "hash_tests"
+path = "tests/unit/hash_tests.rs"
+
+[[test]]
+name = "eval_tests"
+path = "tests/unit/eval_tests.rs"
+
+[[test]]
+name = "timeman_tests"
+path = "tests/unit/timeman_tests.rs"
+
+[[test]]
+name = "search_correctness"
+path = "tests/integration/search_correctness.rs"
+
+[[test]]
+name = "no_timeout"
+path = "tests/integration/no_timeout.rs"
+
+[[test]]
+name = "regression_tests"
+path = "tests/integration/regression/mod.rs"
+
+[[test]]
+name = "node_throughput"
+path = "tests/perf/node_throughput.rs"
+
+[[test]]
+name = "search_efficiency"
+path = "tests/perf/search_efficiency.rs"
+
+[[test]]
+name = "depth_search"
+path = "tests/perf/depth_search.rs"

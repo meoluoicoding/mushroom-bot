@@ -1,0 +1,16 @@
+target/
+*.pyc
+__pycache__/
+*.exe
+*.pdb
+*.d
+*.o
+*.rlib
+*.log
+search_stats.txt
+submission.rs
+submission.exe
+submission.pdb
+submission_check.exe
+submission_check.pdb
+data.bin
